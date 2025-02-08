@@ -1,6 +1,7 @@
-const checkValidate = (email, password, name) => {
+const checkValidate = (email, password, name, flag) => {
   let regexFullName = /^[A-Z][a-z]+(\s[A-Z][a-z]?){0,}/;
-  if (!regexFullName.test(name)) {
+
+  if (!flag && !regexFullName.test(name)) {
     return "Invalid Name";
   }
 
